@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "alterduck",
+    "version": "1.0",
+
+    "description": "Replaces the DuckDuckGo logo with a different one.",
+
+    "icons": {
+        "48": "img/duck.png"
+    },
+
+    "web_accessible_resources": [
+        "img/duck.png"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.duckduckgo.com/*"],
+            "js": ["alterduck.js"]
+        }
+    ]
+}
